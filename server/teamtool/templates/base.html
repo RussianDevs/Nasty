@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/utils.html" as utils%}
+
+{% block title %}{% block page_title %}{% endblock %} - Nasty teamtool{% endblock %}
+
+{% block navbar %}
+{{ nav.top.render() }}
+{% endblock %}
+
+
+{% block mavbar %}
+    <a href="{{ url_for('index') }}" accesskey="H">Home</a>
+    
+{% endblock %}
+
+{% block content %}
+    {{ utils.flashed_messages() }}
+    {% block main_content %}
+
+    {% endblock %}
+{% endblock %}

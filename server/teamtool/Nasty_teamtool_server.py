@@ -1,5 +1,7 @@
-from flask_app.app import app
 
+import sys
+from flask_app.app import app
+sys.setrecursionlimit = 100000
 
 class NastyTeamtoolServer(object):
     def __init__(self):

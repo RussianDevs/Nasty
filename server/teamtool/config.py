@@ -10,3 +10,6 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 DEBUG = True
+
+LANGUAGES = ['ru', 'en']
+
