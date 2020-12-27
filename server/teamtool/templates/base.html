@@ -4,13 +4,10 @@
 {% block title %}{% block page_title %}{% endblock %} - Nasty teamtool{% endblock %}
 
 {% block navbar %}
-{{ nav.top.render() }}
-{% endblock %}
-
-
-{% block mavbar %}
-    <a href="{{ url_for('index') }}" accesskey="H">Home</a>
-    
+    {{ nav.gen.render() }}
+    {% if current_user.is_authenticated %} 
+        {{ nav.usr.render() }}
+    {% endif %}
 {% endblock %}
 
 {% block content %}

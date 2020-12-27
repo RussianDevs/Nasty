@@ -1,24 +1,16 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block page_title %}Авторизация{% endblock %}
+{% block page_title %}{{ _("authorization") }}{% endblock %}
 
 {% block main_content %}
-    <h1>Авторизация</h1>
-    {{ wtf.quick_form(form) }}
+    <h1>{{ _("authorization") }}</h1>
     {{ wtf.form_errors(form) }}
-    <a href="url_for('request_reset_password')">Выстановление пароля</a>
-    <script>
-        const showOrHidePassword = () => {
-          const password = document.getElementById('password');
-          if (password.type === 'password') {
-            password.type = 'text';
-          } else {
-            password.type = 'password';
-          }
-        };
+    {{ wtf.quick_form(form) }}
+    <a href="url_for('request_reset_password')">{{ _('Forgot password?') }}</a>
+{% endblock %}
 
-        show_password.checked = false;
-        show_password.addEventListener('change', showOrHidePassword);
-    </script>
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for("static", filename='scripts/show_password_in_login_form.js') }}"></script>
 {% endblock %}
