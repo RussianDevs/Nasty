@@ -1,4 +1,4 @@
-from flask_app.app import app
+from app import app
 
 
 class NastyTeamtoolServer(object):

@@ -1,12 +1,12 @@
 from flask_login import current_user, login_user
 from flask_restful import Resource
 
-from ..app import db
-from ..models import User
+from app import db
+from app.models import User
 
 
 class Login(Resource):
-    def get(self):
+    def patch(self):
         if current_user.is_authenticated:
            return  "Uou are authenticated.", 403
         else:

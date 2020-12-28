@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block page_title %}{{ _("Error {}").format(error.code) }}{% endblock %}
+
+{% block main_content %}
+    <h1>{{ _("Error") }}</h1>
+    {% block error_description %}
+        
+    {% endblock %}
+{% endblock %}

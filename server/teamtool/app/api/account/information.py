@@ -6,5 +6,5 @@ class AccountInfo(Resource):
     decorators = [login_required]
 
     def get(self):
-        return make_response(jsonify({"firstname": current_user.firstname, "lastname": current_user.lastname, "permission": current_user.permission}))
+        return make_response(jsonify({"firstname": current_user.firstname, "lastname": current_user.lastname, "post": current_user.post.name}))
     

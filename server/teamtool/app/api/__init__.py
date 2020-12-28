@@ -1,11 +1,16 @@
-from ..app import restful_api
+from flask import Blueprint
+from flask_restful import Api
 
-'''from .api import Organization, Login, Registration, AccountDescription
-restful_api.add_resource(Organization, "/api/organization", endpoint="Organization")   
+bp = Blueprint("api", __name__)
+
+restful_api = Api(bp, prefix="/v1")
+
+'''from app.api.api import Organization, Login, Registration, AccountDescription
+restful_api.add_resource(Organization, "/organization", endpoint="api.organization")   
 restful_api.add_resource(Registration, "/api/registration", "/api/registration/<string:username>/<string:firstname>/<string:lastname>/<string:password>/<string:mail>/<int:permission>", endpoint="registration")
 # restful_api.add_resource(AccountDescription, "/api/account/get-info", endpoint="get-account-info")'''
 
-from . import account
-from . import login
+#from app.api import account
+from app.api import login
 
 restful_api.add_resource(login.Login, '/api/login', '/api/login/<string:username>/<string:password>', endpoint="api_login")

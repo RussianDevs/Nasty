@@ -3,7 +3,7 @@ from flask_babel import _, lazy_gettext as _l
 from flask_login import current_user
 from flask_nav.elements import Navbar, View, Link, Text, Subgroup, NavigationItem
 
-from .app import app, babel, nav
+from app import app, babel, nav
 
 @babel.localeselector
 def get_locale():

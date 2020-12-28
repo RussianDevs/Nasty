@@ -2,9 +2,9 @@ from flask import url_for, make_response, jsonify
 from flask_login import login_required, current_user, login_user
 from flask_restful import Resource
 
-from ..app import app, db
+from app import db
 
-from ..models import User
+from app.models import User
 
 
 

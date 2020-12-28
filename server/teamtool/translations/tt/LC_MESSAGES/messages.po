@@ -1,4 +1,4 @@
-# Russian translations for PROJECT.
+# Tatar translations for PROJECT.
 # Copyright (C) 2020 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
@@ -8,78 +8,77 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-12-28 10:16+0300\n"
-"PO-Revision-Date: 2020-12-28 10:20+0300\n"
-"Last-Translator: Гумеров Амир Эдуардович <ar8200@bk.ru>\n"
-"Language: ru\n"
-"Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"PO-Revision-Date: 2020-12-28 11:09+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: tt\n"
+"Language-Team: tt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
-"X-Generator: Poedit 2.3.1\n"
 
 #: flask_app/app.py:24
 msgid "Please log in to get access to this content."
-msgstr "Пожалуйста, войдите, чтобы получить доступ к этому контенту"
+msgstr ""
 
 #: flask_app/forms.py:8 flask_app/tables.py:6
 msgid "Username"
-msgstr "Имя пользователя"
+msgstr ""
 
 #: flask_app/forms.py:9
 msgid "Password"
-msgstr "Пароль"
+msgstr ""
 
 #: flask_app/forms.py:10
 msgid "Show password"
-msgstr "Показать парольПароль"
+msgstr ""
 
 #: flask_app/forms.py:11
 msgid "Remember me"
-msgstr "Запомнить меня"
+msgstr ""
 
 #: flask_app/forms.py:12
 msgid "Login"
-msgstr "Войти"
+msgstr ""
 
 #: flask_app/tables.py:7
 msgid "Firstname"
-msgstr "Имя"
+msgstr ""
 
 #: flask_app/tables.py:8
 msgid "Lastname"
-msgstr "ФамилияИмя пользователя"
+msgstr ""
 
 #: flask_app/tables.py:9
 msgid "Email"
-msgstr "Почта"
+msgstr ""
 
 #: flask_app/tables.py:10
 msgid "Post"
-msgstr "Должность"
+msgstr ""
 
 #: flask_app/utils.py:15
 msgid "Welcome {} {}"
-msgstr "Добро пожаловать"
+msgstr ""
 
 #: flask_app/utils.py:21
 msgid "Home"
-msgstr "Домой"
+msgstr ""
 
 #: flask_app/utils.py:27
 msgid "My profile"
-msgstr "Мой профель"
+msgstr ""
 
 #: flask_app/views/views.py:19
 msgid "You logged in yet"
-msgstr "Вы уже вошли"
+msgstr ""
 
 #: flask_app/views/views.py:27
 msgid "Invalid username or password"
-msgstr "Неверное имя пользователя или пароль"
+msgstr ""
 
 #: flask_app/views/views.py:35
 msgid "you logged out"
-msgstr "Вы вышли"
+msgstr ""
+

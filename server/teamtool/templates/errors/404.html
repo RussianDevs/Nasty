@@ -1,6 +1,5 @@
-{% extends "base.html" %}
+{% extends "errors/base.html" %}
 
-{% block page_title %}Error 404{% endblock %}
-
-{% block main_content %}
+{% block error_description%}
+    {{ _("Sorry, the requested page ({}) was not found").format(path) }}
 {% endblock %}
