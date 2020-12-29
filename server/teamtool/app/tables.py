@@ -7,7 +7,15 @@ class UserProfileTable(Table):
     firstname = Col(_l("Firstname"))
     lastname = Col(_l("Lastname"))
     email = Col(_l("Email"))
-    post = Col(_l("Post"))
+    role = Col(_l("Role"))
 
 def get_user_profile_table(u):
-    return UserProfileTable([{"username": u.username, "firstname": u.firstname, "lastname": u.lastname, "email": u.email, "post": u.post},])
+    return UserProfileTable(
+        [{
+            "username": u.username,
+            "firstname": u.firstname,
+            "lastname": u.lastname,
+            "email": u.email,
+            "role": u.role.name
+        },]
+    )

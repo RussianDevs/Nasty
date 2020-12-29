@@ -2,7 +2,7 @@ from flask import abort, flash, make_response, redirect, render_template, reques
 from flask import abort, flash, make_response, redirect, render_template, request, url_for
 from flask_babel import _
 from flask_login import login_required, current_user, login_user, logout_user
-
+from werkzeug.urls import url_parse
 
 from app import app, db
 from app.decorators import *
@@ -18,14 +18,17 @@ def index():
 @app.route('/login/', endpoint="frontend.login", methods=['get', 'post'])
 def login():
     if current_user.is_authenticated:
-        flash(_("You logged in yet"), "Warning")
+        flash(_("You logged in yet"), "info")
         return redirect(url_for('frontend.index'))
     form = LoginForm()
     if form.validate_on_submit():
         user = db.session.query(User).filter(User.username == form.username.data).first()
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remember.data)
-            return redirect(url_for('frontend.index'))
+            next_page = request.args.get('next')
+            if not next_page or url_parse(next_page).netloc != '':
+                next_page = url_for('frontend.index')
+            return redirect(next_page)
         flash(_("Invalid username or password"), 'error')
         return redirect(url_for('frontend.login'))
     return render_template('login.html', form=form)
@@ -39,8 +42,5 @@ def logout():
 
 @app.route("/t/", methods=["post", "GET"])
 @admin_required
-@login_required
 def t():
     abort(451)
-
-

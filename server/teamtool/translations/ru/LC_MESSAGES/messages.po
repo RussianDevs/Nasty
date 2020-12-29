@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-12-28 10:16+0300\n"
-"PO-Revision-Date: 2020-12-28 10:20+0300\n"
+"PO-Revision-Date: 2020-12-29 14:27+0300\n"
 "Last-Translator: Гумеров Амир Эдуардович <ar8200@bk.ru>\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgstr "Должность"
 
 #: flask_app/utils.py:15
 msgid "Welcome {} {}"
-msgstr "Добро пожаловать"
+msgstr "Добро пожаловать {} {}"
 
 #: flask_app/utils.py:21
 msgid "Home"

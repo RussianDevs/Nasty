@@ -1,7 +1,7 @@
 from flask import request
 from flask_babel import _, lazy_gettext as _l
 from flask_login import current_user
-from flask_nav.elements import Navbar, View, Link, Text, Subgroup, NavigationItem
+from flask_nav.elements import Navbar, View, Link, Text, Subgroup
 
 from app import app, babel, nav
 
@@ -10,14 +10,22 @@ def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 class GreetingText(Text):
+    def __init__(self):
+        pass
+
     @property
-    def Text(self):
-        return _("Welcome {} {}").format(current_user.firstname, current_user.lastname)
+    def text(self):
+        print("a")
+        if current_user.is_authenticated():
+            print("m1")
+            return _("Welcome {} {}").format(current_user.firstname, current_user.lastname)
+        else:
+            print("m2")
+            return _("Welcome")
 
 
 gen_navbar = Navbar(
-    "Nasty teamtool",
-    GreetingText("Hi"),
+    # GreetingText(),
     View(_l("Home"), "frontend.index"),
 )
 

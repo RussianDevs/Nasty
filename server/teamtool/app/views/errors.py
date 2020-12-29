@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import abort, request, render_template
 
 from app import app, db
 
@@ -23,4 +23,8 @@ def error405(error):
 def error500(error):
     db.session.rollback()
     return render_template("errors/500.html", error=error), 500
+
+@app.route("/generate_error/<int:error_code>/")
+def generate_error(error_code):
+    abort(error_code)
 
