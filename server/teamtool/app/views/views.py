@@ -39,8 +39,3 @@ def logout():
     logout_user()
     flash(_("you logged out"), 'info')
     return redirect(url_for('frontend.index'))
-
-@app.route("/t/", methods=["post", "GET"])
-@admin_required
-def t():
-    abort(451)
